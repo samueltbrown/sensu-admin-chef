@@ -100,6 +100,14 @@ template "/etc/init.d/sensu-admin" do
   variables(:base_path => node.sensu.admin.base_path)
 end
 
+directory "/etc/nginx/sites-available" do
+  action :create
+end
+
+directory "/etc/nginx/sites-enabled" do
+  action :create
+end
+
 link "/etc/nginx/sites-available/sensu-admin.conf" do
   to "#{node.sensu.admin.base_path}/sensu-admin-nginx.conf"
 end
