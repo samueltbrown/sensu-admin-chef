@@ -23,8 +23,8 @@
 
 package "nginx"
 package "git"
-package "sqlite3"
-package "libsqlite3-dev"
+package "sqlite"
+package "sqlite-devel"
 
 # bundle install fails unless the mysql c libraries are available
 include_recipe "mysql::ruby"
