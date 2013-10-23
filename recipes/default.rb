@@ -33,6 +33,7 @@ user node.sensu.admin.user do
   system true
 end
 
+gem_package "libyaml"
 gem_package "unicorn"
 gem_package "bundler"
 gem_package "rake" do
